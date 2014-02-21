@@ -1,0 +1,75 @@
+Trivia 1 - 50 pts 
+http://en.wikipedia.org/wiki/Hexspeak
+ans: 0xB16B00B5
+----------------------------------------
+Trivia 3
+http://www.imdb.com/title/tt0113957/
+ans: Gatekeeper
+----------------------------------------
+Trivia 4:
+http://www.google.co.in/search?client=ubuntu&channel=fs&q=800Bytes+OC1+to+400Bytes+english+poem+conversion&ie=utf-8&oe=utf-8&redir_esc=&ei=sP1KUNjOPMrUrQfit4DwCA#hl=en&client=ubuntu&hs=13b&channel=fs&sa=X&ei=sf1KUJWmBsisrAfUjYGgDw&ved=0CB0QBSgA&q=800+Bytes+OC1+to+400+Bytes+english+poem+conversion&spell=1&bav=on.2,or.r_gc.r_pw.r_qf.&fp=89296a2d884ca89c&biw=1366&bih=612
+
+First link comes 
+RFC1605 SONET to Sonnet Translation
+ans: 1605
+----------------------------------------
+Trivia 5:
+
+hints: nm0794890 - its a imdb token.
+Opened the url of that imdb link 
+www.imdb.com/name/nm0794890/
+Its Dan Shor, He acted in TRON and play the character of Ram (got the info from TRON movie, IMDB)
+
+ans:Ram
+----------------------------------------
+Web1
+
+nulladmin
+hints: nohint
+http://ctf.nullcon.net/web1/getuser.php
+q=>   czo3OiJzb251MDQxIjs=
+decode in base64
+s:7:"sonu041";
+s:7:"nulladmin";		czo3OiJudWxsYWRtaW4iOw==  	failed
+n:9:"nulladmin";		bjo5OiJudWxsYWRtaW4iOw==	failed
+s:11:"'nulladmin'";		czoxMToiJ251bGxhZG1pbiciOw==
+s:5:"admin";			czoxMToiJ251bGxhZG1pbiciOw==
+
+teamencoder
+czoxMToidGVhbWVuY29kZXIiOw==
+s:11:"teamencoder";
+
+--------------------
+Program1
+ans:<done>
+--------------------
+Program2
+ans: 69720375229712477164533808935312303556800
+--------------------
+Program3
+
+
+------
+Crypt1
+
+.-. --- - -- . -.-- .-. --. ..-. --.. -. -..- .-. --. ..- ...- ..-. .--- -... . -.-- --.- -. --- .-. --. --. .-. . -.-. -.-- -. .--. .-. --- .-.. .--- -... . -..- ...- .- - --. -... .--- -. . --.- ..-. -. - . .-. .-. .- .-. . .--- -... . -.-- --.- --- .... --. --. ..- ...- ..-. ...- ..-. .- -... --. .--- ..- .-.. .-.. -... .... -. . .-. ..- .-. . .-. .-.. -... .... -. . .-. ..- .-. . .-. --. -... -..- .- -... .--- --. ..- .-. -.-. -. ..-. ..-. .--- -... . --.- ..-. -... ...- ..-. ..- -... .... -.-- --.- .- -... --. .--- -. ..-. --. .-. --.. -... . .-. -... ... .-.. -... .... . --. ...- --.. .-. -. .- --.- - - ...- .. .-. .-.. -... .... -.-. -. ..-. ..-. .--- -... . --.- ..-. -... --. ..- .-. -.-. -. ..-. ..-. .--- -... . --.- ... -... . --. ..- ...- ..-. -.-- .-. .. .-. -.-- ..-. ..- -... .... -.-- --.- --- .-. -. -.-- -.-. .-. .- -.-- ...- --- .-. .-.. ..-. -... .- -... .--- --- .-. ..-. --. -... ... -.-- .... .--. -..- ... -... . .- .-. -.- --. -.-- .-. .. .-. -.-- ..-. --- --. .--- --. ..- .-. -.-. -. ..-. ..-. .--- -... . --.- ...- ..-. --. ..- .-. ...- .- .. .-. . ..-. .-. -... ... --. ..- .-. .. -. -.-- .... .-. ...- - -. .. .-. .-. -. . -.-- ...- .-. . .-.-.-
+
+ROTMEYRGFZNXRGUVFJBEYQNORGGRECYNPROLJBEXVATGBJNEQFNTERRAREJBEYQOHGGUVFVFABGJULLBHNERURERLBHNERURERGBXABJGURCNFFJBEQFBVFUBHYQABGJNFGRZBERBSLBHEGVZRNAQTTVIRLBHCNFFJBEQFBGURCNFFJBEQSBEGUVFYRIRYFUBHYQORNYCRAYVORLFBABJORFGBSYHPXSBEARKGYRIRYFOGJGURCNFFJBEQVFGURVAIREFRBSGURINYHRVTNIRRNEYVRE. 
+
+
+EBGZR LETS MAKE THIS WORLD A BETTER PLACE BY WORKING TOWARDS A GREENER WORLD BUT THIS IS NOT WHY YOU ARE HERE YOU ARE HERE TO KNOW THE PASSWORD SO I SHOULD NOT WASTE MORE OF YOUR TIME AND GGIVE YOU PASSWORD SO THE PASSWORD FOR THIS LEVEL SHOULD BE ALPENLIBEY SO NOW BEST OF LUCKFORNEXTLEVELS BTW THE PASSWORD IS THE INVERSE OF THE VALUE I GAVE EARLIER.
+
+REILRAEEVAGI
+IGAVEEARLIER
+
+ALPENLIBEY
+ans:YEBILNEPLA
+
+----
+
+program 3
+rot has historicallly been known as a weak encoding as there is a very simple programs and online impplementations which can very easily decode these values .now  for this challenge sake,the key to be used is#@fibonacci incremental series are awesome09(if%you use this as your key you.should3be4ablee2to%crack1this4level61,best/of6luck,
+
+ans: FIBONACCI incremental SERIES are awesome
+
+
