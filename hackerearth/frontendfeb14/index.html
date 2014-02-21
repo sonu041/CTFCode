@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Social Web</title>
+
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	
+	<script type='text/javascript'>//<![CDATA[ 
+	$(window).load(function(){
+		document.getElementById('my-form').onsubmit=function() {
+		var myTextField1 = document.getElementById('xxx');
+		   
+			var json;
+			$('#myTableId tr').remove();
+			$.ajax({
+				type: 'GET',
+				url: 'http://api2.socialmention.com/search',
+				data: { q: '#' + myTextField1.value, f: 'jsonp', t: 'all' },
+				jsonpCallback: 'jsonp',
+				dataType: 'jsonp',
+				success: function(results){
+					json = results;
+					for (var i = 0; i < json.count; i++) {
+						tr = $('<tr/>');
+						
+						tr.append("<div>" + json.items[i].source + "</div>");
+						tr.append("<div>" + json.items[i].title + "</div>");
+						tr.append("<div>" + json.items[i].description + "</div>");
+						tr.append("<div><a href =\"" + json.items[i].link + "\">" + json.items[i].link + "</a></div>");
+
+						tr.append("<div style=\"color: #BCBCBC;font-size: 90%;\">" + _format_date(json.items[i].timestamp) + "</div>");
+						//tr.append("<div> Facebook Twitter LinkedIn GooglePlus </div>");
+						tr.append("<hr/>");
+						$('table').append(tr);
+					}
+				}
+			});
+		return false;
+		}
+	});//]]>  
+	
+	function _format_date(unix_timestamp) {
+	  var difference_in_seconds = (Math.round((new Date()).getTime() / 1000)) - unix_timestamp,
+		  current_date = new Date(unix_timestamp * 1000), minutes, hours,
+		  months = new Array(
+			'January','February','March','April','May',
+			'June','July','August','September','October',
+			'November','December');
+	  
+	  if(difference_in_seconds < 60) {                                  
+		return difference_in_seconds + " second" + _plural(difference_in_seconds) + " ago";
+	  } else if (difference_in_seconds < 60*60) {
+		minutes = Math.floor(difference_in_seconds/60);
+		return minutes + " minute" + _plural(minutes) + " ago";
+	  } else if (difference_in_seconds < 60*60*24) {
+		hours = Math.floor(difference_in_seconds/60/60);
+		return hours + " hour" + _plural(hours) + " ago";
+	  } else if (difference_in_seconds > 60*60*24){
+		if(current_date.getYear() !== new Date().getYear()) 
+		  return current_date.getDay() + " " + months[current_date.getMonth()].substr(0,3) + " " + _fourdigits(current_date.getYear());
+		
+		return current_date.getDay() + " " + months[current_date.getMonth()].substr(0,3);
+	  }
+	  
+	  return difference_in_seconds;
+	  
+	  function _fourdigits(number)	{
+			return (number < 1000) ? number + 1900 : number;}
+
+	  function _plural(number) {
+		if(parseInt(number) === 1) {
+		  return "";
+		}
+		return "s";
+	  }
+	}
+
+	</script>
+	
+	<script type="text/javascript">//<![CDATA[
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-43780055-1']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+
+  </head>
+  <body>
+	<h1>Enter #hastag keyword</h1>
+	<form id="my-form">
+	#<input id = "xxx" type="text" name="in" value="" />
+	<button type="submit">Go</button>
+	</form>
+
+  <table id="myTableId">
+  </table>
+	
+  </body>
+</html>
